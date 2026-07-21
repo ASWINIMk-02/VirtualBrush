@@ -1,4 +1,20 @@
- ## Architecture
+# VirtualBrush – Air Drawing using OpenCV & MediaPipe
+
+## Project Overview
+
+(Short description)
+
+## Features
+
+- Real-time hand tracking
+- Air drawing
+- Multiple colors
+- Eraser
+- Save drawing
+- Clear canvas
+- Lightweight and fast
+
+## Architecture
 
 ![VirtualBrush Architecture](docs/architecture.png)
 
@@ -8,6 +24,24 @@
 - OpenCV
 - MediaPipe
 - NumPy
+
+## Project Structure
+
+```text
+VirtualBrush/
+│── docs/
+│   ├── architecture.png
+│   ├── hand_detection.png
+│   ├── drawing.png
+│   ├── color_change.png
+│   └── final_output.png
+│
+│── air_draw.py
+│── README.md
+│── requirements.txt
+│── LICENSE
+└── .gitignore
+```
 
 ## Installation
 
@@ -75,28 +109,11 @@ python air_draw.py
 - Add Gesture Customization
 - Improve UI Design
 
-## Project Structure
-
-```
-VirtualBrush/
-│── docs/
-│   ├── hand_detection.png
-│   ├── drawing.png
-│   ├── color_change.png
-│   └── final_output.png
-│
-│── air_draw.py
-│── README.md
-│── requirements.txt
-│── LICENSE
-└── .gitignore
-```
-
 ## Author
 
 **Aswini M**
 
-B.Tech(Hons.) Computer Science Engineering (AI & ML)
+B.Tech (Hons.) Computer Science Engineering (AI & ML)
 
 Periyar Maniammai Institute of Science and Technology
 
