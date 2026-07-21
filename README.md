@@ -1,40 +1,107 @@
-# VirtualBrush ✋🎨
+ ## Architecture
 
-Real-time, touchless drawing application that tracks hand landmarks through a
-webcam and lets you paint in the air with your index finger — no stylus, no
-touchscreen, no gloves.
+![VirtualBrush Architecture](docs/architecture.png)
 
-![status](https://img.shields.io/badge/status-active-brightgreen)
-![python](https://img.shields.io/badge/python-3.9%2B-blue)
-![opencv](https://img.shields.io/badge/OpenCV-4.9-orange)
-![mediapipe](https://img.shields.io/badge/MediaPipe-0.10-yellowgreen)
+## Technologies Used
 
-<!-- Add a demo GIF here once recorded -->
-<!-- ![demo](docs/demo.gif) -->
+- Python 3.12
+- OpenCV
+- MediaPipe
+- NumPy
 
-## Overview
+## Installation
 
-VirtualBrush uses [MediaPipe Hands](https://developers.google.com/mediapipe) to
-extract 21 3D hand landmarks per frame at real-time speed on CPU, then
-applies lightweight geometric rules to classify finger state and gesture
-intent. A persistent canvas is alpha-blended onto the live camera feed so
-strokes remain visible and stable across frames.
+Clone the repository:
 
-**Why this project matters:** it demonstrates an end-to-end real-time CV
-pipeline — capture → inference → state management → rendering — using the
-same architectural pattern found in production AR/gesture-control systems,
-without requiring custom model training or a GPU.
+```bash
+git clone https://github.com/ASWINIMK-02/VirtualBrush.git
+```
 
-## Features
+Move into the project folder:
 
-- Real-time hand tracking (single hand, extendable to two)
-- Gesture-based mode switching:
-  - ☝️ Index finger only → draw
-  - ✌️ Index + middle → hover / select (no drawing)
-  - ✊ Fist → idle
-- On-screen color palette + eraser, selected by hovering
-- Exponential smoothing on stroke points to suppress landmark jitter
-- Live FPS counter for performance visibility
-- Save canvas to PNG, clear canvas, all via keyboard shortcuts
+```bash
+cd VirtualBrush
+```
 
-## Architecture
+Install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application:
+
+```bash
+python air_draw.py
+```
+
+## Usage
+
+1. Start the application.
+2. Allow webcam access.
+3. Raise only your **Index Finger** to draw.
+4. Raise **Index + Middle Finger** to select a color.
+5. Hover over **ERASE** to erase drawings.
+6. Press:
+   - `C` → Clear Canvas
+   - `S` → Save Drawing
+   - `Q` → Quit Application
+
+## Screenshots
+
+### Hand Detection
+
+![Hand Detection](docs/hand_detection.png)
+
+### Drawing
+
+![Drawing](docs/drawing.png)
+
+### Color Selection
+
+![Color Selection](docs/color_change.png)
+
+### Final Output
+
+![Final Output](docs/final_output.png)
+
+## Future Improvements
+
+- Add Clear button on screen
+- Add Save button on screen
+- Add Brush Size Selection
+- Add Undo / Redo
+- Support Multiple Hands
+- Add Gesture Customization
+- Improve UI Design
+
+## Project Structure
+
+```
+VirtualBrush/
+│── docs/
+│   ├── hand_detection.png
+│   ├── drawing.png
+│   ├── color_change.png
+│   └── final_output.png
+│
+│── air_draw.py
+│── README.md
+│── requirements.txt
+│── LICENSE
+└── .gitignore
+```
+
+## Author
+
+**Aswini M**
+
+B.Tech(Hons.) Computer Science Engineering (AI & ML)
+
+Periyar Maniammai Institute of Science and Technology
+
+GitHub: https://github.com/ASWINIMK-02
+
+## License
+
+This project is licensed under the MIT License.
