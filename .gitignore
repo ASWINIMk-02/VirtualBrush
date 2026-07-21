@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+venv/
+.venv/
+air_draw_saves/
+docs/demo.gif
+.DS_Store
